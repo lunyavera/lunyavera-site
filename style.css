@@ -1,0 +1,253 @@
+/* =====================================================
+   Luna's Toyhouse CSS!
+===================================================== */
+@import url('https://fonts.googleapis.com/css?family=Solitreo');
+
+:root {
+  --bg: #fff7fb;
+  --paper: #ffffff;
+  --pink: #ff9bbd;
+  --pink-soft: #ffd6e6;
+  --ink: #3b2f35;
+  --muted: #7f6f76;
+  --accent: #ff5f9e;
+  --radius: 18px;
+  --shadow: 0 10px 25px rgba(255, 155, 189, .12);
+}
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+body {
+  font-family: "Quicksand", sans-serif !important;
+  color: var(--ink);
+  background: url(https://i.imgur.com/5R2doEp.png);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Solitreo", cursive;
+}
+
+.small {
+  font-size: 0.7em !important;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+.navbar {
+  background: var(--paper) !important;
+  border-bottom: 4px solid var(--pink-soft);
+  padding: 0;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-family: "Solitreo", cursive !important;
+  font-size: 15px;
+  position: relative;
+  top: 3px;
+}
+
+.navbar-brand::before {
+  content: "";
+  font-family: 'Font Awesome 5 Pro', 'Font Awesome 5 Free' !important;
+  font-weight: 900 !important;
+  display: inline-block;
+  margin-right: 8px;
+  color: var(--pink);
+  font-size: 20px;
+  line-height: 1;
+  padding-bottom: 8px;
+  animation: pawFloat 3s ease-in-out infinite;
+}
+
+@keyframes pawFloat {
+
+  0%,
+  100% {
+    transform: translateY(1px);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.navbar .container,
+.navbar .container-fluid {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100%;
+}
+
+.navbar-brand {
+  display: flex !important;
+  align-items: center !important;
+  font-weight: 900 !important;
+  color: var(--accent) !important;
+  padding: 0 12px !important;
+  line-height: 1 !important;
+}
+
+.navbar-nav {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.nav-link {
+  display: flex !important;
+  align-items: center !important;
+  height: 56px;
+  padding: 0 12px !important;
+  line-height: 1 !important;
+}
+
+.navbar-toggler-icon {
+  background-image: none !important;
+  background: none !important;
+  width: 22px !important;
+  height: 16px !important;
+  display: inline-block !important;
+  position: relative !important;
+  vertical-align: middle !important;
+}
+
+.navbar-toggler-icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 2px;
+  background: var(--pink);
+  border-radius: 999px;
+  box-shadow:
+    0 7px 0 var(--pink),
+    0 14px 0 var(--pink);
+}
+
+.nav-mobile-menu {
+  background-color: var(--bg) !important;
+  border-color: var(--pink-soft) !important;
+}
+
+.navbar .dropdown-menu .dropdown-divider {
+  border-color: var(--pink);
+}
+
+.navbar .nav-user-link .display-user-tiny img {
+  border-radius: 50%;
+}
+
+/* =====================================================
+   CARDS
+===================================================== */
+.card,
+div.card-block.bg-faded {
+  background: var(--paper);
+  border: 1px solid var(--pink-soft);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .04);
+  padding: 20px;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+.btn {
+  background: var(--pink-soft) !important;
+  color: #fff !important;
+  border-radius: 999px !important;
+  font-weight: 800 !important;
+  border: 2px solid #fff !important;
+  box-shadow: 0 6px 15px rgba(255, 155, 189, .25);
+  transition: .2s ease;
+}
+
+.btn:hover {
+  background: var(--pink) !important;
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   LINKS
+===================================================== */
+a {
+  color: var(--muted) !important;
+  transition: .2s ease;
+}
+
+a:hover {
+  color: var(--accent) !important;
+  text-decoration: none;
+}
+
+/* =====================================================
+   BADGES
+===================================================== */
+.badge {
+  background: var(--pink-soft) !important;
+  color: var(--ink) !important;
+  border-radius: 999px !important;
+  padding: 4px 10px !important;
+  border: 1px solid rgba(255, 155, 189, .25) !important;
+}
+
+/* =====================================================
+   DROPDOWNS
+===================================================== */
+.dropdown-menu {
+  background: #fff !important;
+  border: 1px solid var(--pink-soft) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, .08);
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 155, 189, .12) !important;
+  transform: none;
+}
+
+.dropdown-header {
+  color: var(--pink) !important;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.footer {
+  background: var(--paper);
+  border-top: 4px solid var(--pink-soft);
+}
+
+.footer:after {
+  content: "CSS made by Lunyavera~";
+  color: var(--pink);
+}
+
+.footer .mx-1 {
+  color: var(--pink);
+}
+
+/* =====================================================
+   PAW ICON FOR ME :3
+===================================================== */
+
+.display-user a[href="https://toyhou.se/Lunyavera"] .user-name-icon {
+  display: none;
+}
+
+.profile-section .display-user a[href="https://toyhou.se/Lunyavera"]::before {
+  content: "\f1b0";
+  font-family: 'Font Awesome 5 Pro', 'Font Awesome 5 Free' !important;
+  font-weight: 900;
+  margin-right: 6px;
+  color: var(--pink);
+}
